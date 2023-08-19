@@ -1,0 +1,58 @@
+{% set page_name = "paste_edit" %}
+{% extends "layout/basic.html" %}
+{% block content %}
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="section">
+      <div class="section__body">
+        <form method="post">
+          <div class="row">
+						<div class="medium-12 columns">
+              <label>
+                {{ _('PasteID') }}
+                <input name="pasteid" value="{{ doc._id }}" class="textbox" readonly>
+              </label>
+            </div>
+					</div>
+          <div class="row">
+            <div class="medium-10 columns">
+              <label>
+                {{ _('Title') }}
+                <input name="title" placeholder="{{ _('title') }}" value="{{ doc.title }}" class="textbox" autofocus>
+              </label>
+            </div>
+            <br>
+            <div class="medium-2 columns">
+              {% if doc.isprivate == true %}
+                <label class="checkbox">
+                  <input type="checkbox" name="isprivate" value="on" checked></input>
+                  私有
+                </label>
+              {% else %}
+                <label class="checkbox">
+                  <input type="checkbox" name="isprivate" value="on"></input>
+                  私有
+                </label>
+              {% endif %}
+            </div>
+          </div>
+          <div class="row">
+            <div class="medium-12 columns">
+							<label>
+								{{ _('Content') }}
+								<textarea name="content" class="textbox" style="height: 500px" data-markdown>{{ doc.content }}</textarea>
+							</label>
+						</div>
+          </div>
+          <div class="row" style="margin-left: 5px; text-align: left;">
+            <input type="hidden" name="csrfToken" value="{{ handler.csrfToken }}">
+            <button type="submit" class="rounded primary button">
+              {{ _('Update') }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

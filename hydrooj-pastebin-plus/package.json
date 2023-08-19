@@ -1,0 +1,10 @@
+{
+  "name": "hydrooj-pastebin-plus",
+  "version": "1.0.9",
+  "description": "Hydro pastebin module",
+  "main": "index.js",
+  "author": "liyanqwq",
+  "license": "AGPL-3.0",
+  "peerDependencies": {
+  }
+}

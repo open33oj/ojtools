@@ -1,0 +1,45 @@
+{% set page_name = "paste_manage" %}
+{% extends "layout/basic.html" %}
+{% block content %}
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="section">
+      <div class="section__body">
+        <!--<form method="post">-->
+          <div class="row">
+            <div class="medium-12 columns" style="text-align: center;">
+              <h2>
+                {{ _("paste_manage") }}
+              </h2>
+            </div>
+          </div>
+          <div class="row" style="padding-left:20px;padding-right: 20px;padding-top: 40px;padding-bottom: 20px;user-select:none;">
+              <table class="data-table">
+                <tbody>
+                    {%- for pdoc in doc -%}
+                    <tr>
+                        <td><a href="/paste/show/{{pdoc._id}}" style="color:inherit">{{pdoc.title}}</a></td>
+                        <td>{{pdoc.time}}</td>
+                        <td>
+                            <a href="/paste/show/{{pdoc._id}}/edit">编辑</a>&nbsp;&nbsp;
+                            <a href="/paste/show/{{pdoc._id}}/delete">删除</a>
+                        </td>
+                    </tr>
+                    {%- endfor -%}
+                </tbody>
+                </table>
+                <a href="/paste/create" type="submit" class="rounded primary button" style="margin-top:2em;">
+                  {{ _('Create') }}
+                </a>
+          </div>
+          <br>
+          <div class="row" style="margin-left: 5px; text-align: left;">
+            <input type="hidden" name="csrfToken" value="{{ handler.csrfToken }}">
+            <div style="margin-top:12px;user-select:none;">我们会审查剪贴板内容，并对发布不合适内容的同学进行相应的处理</div>
+          </div>
+        <!--</form>-->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

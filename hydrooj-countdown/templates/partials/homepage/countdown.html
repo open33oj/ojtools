@@ -1,0 +1,23 @@
+<div class="section side nojs--hide" style="user-select: none;">
+  <div class="section__header">
+    <h1 class="section__title" id="countdown_title">{% if payload.title %}{{payload.title}}{% else %}请设置日历{% endif %}</h1>
+  </div>
+  {{payload.test}}
+  {% if payload.dates %}
+  <div class="section__body typo" style="color:#444;line-height:2;user-select:text;" id="countdowns">
+        {% for date in payload.dates %}
+        距离 {{date.name}} 还有 {{date.diff}} 天<br />
+        {% endfor %}
+  </div>
+  {% else %}
+  <div class="section__body typo" style="color:#444;line-height:2;" id="countdowns">
+        请设置日历！
+  </div>
+  {% endif %}
+</div>
+<script>
+    function loadCountdown(){
+        window.dispatchEvent(new Event('countdown-finish'));
+    }
+    window.addEventListener('load', loadCountdown, {once : true});
+</script>

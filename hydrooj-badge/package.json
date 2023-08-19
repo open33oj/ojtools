@@ -1,0 +1,8 @@
+{
+  "name": "hydrooj-badge",
+  "version": "1.0.0",
+  "description": "hydrooj' 'set-badge' page",
+  "main": "index.js",
+  "author": "33",
+  "license": "MIT"
+}

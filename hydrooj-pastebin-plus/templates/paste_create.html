@@ -1,0 +1,46 @@
+{% set page_name = "paste_create" %}
+{% extends "layout/basic.html" %}
+{% block content %}
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="section">
+      <div class="section__body">
+        <form method="post">
+          <div class="row">
+            <div class="medium-10 columns">
+              <label>
+                {{ _('Title') }}
+                <input name="title" placeholder="{{ _('title') }}" class="textbox" autofocus>
+              </label>
+            </div>
+            <br>
+            <div class="medium-2 columns">
+              <label class="checkbox">
+                <input type="checkbox" name="isprivate" value="on"></input>
+                私有
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="medium-12 columns">
+              <label>
+                {{ _('Content') }}
+                <textarea name="content" class="textbox" style="height: 500px" data-markdown></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row" style="margin-left: 5px; text-align: left;">
+            <input type="hidden" name="csrfToken" value="{{ handler.csrfToken }}">
+            <button type="submit" class="rounded primary button">
+              {{ _('Create') }}
+            </button>
+            <a href="/paste/manage" class="rounded button">
+              {{ _('Manage my pastes') }}
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
