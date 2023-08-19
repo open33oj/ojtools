@@ -8,6 +8,9 @@
 
 ## 使用到开源项目
 
-- https://github.com/hydro-dev/Hydro：OJ框架
-- https://github.com/liyanqwq/hydrooj-countdown：倒计时插件原项目
-- https://github.com/liyanqwq/hydrooj-pastebin-plus：剪贴板插件原项目
+- https://github.com/hydro-dev/Hydro
+  - OJ框架
+- https://github.com/liyanqwq/hydrooj-countdown
+  - 倒计时插件原项目
+- https://github.com/liyanqwq/hydrooj-pastebin-plus
+  - 剪贴板插件原项目
