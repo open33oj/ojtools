@@ -3,6 +3,7 @@
 ## 插件简介
 
 - hydrooj-badge: 徽章管理页面插件
+- hydrooj-sidebar-nav: 可以在控制面板编辑的边栏导航
 - hydrooj-pastebin-plus: 剪贴板插件
 - hydrooj-countdown: 倒计时插件
 

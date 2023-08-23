@@ -1,7 +1,7 @@
 {
-  "name": "hydrooj-badge",
+  "name": "hydrooj-sidebar-nav",
   "version": "1.0.0",
-  "description": "hydrooj 'set-badge' page",
+  "description": "hydrooj homepage sidebar nav",
   "main": "index.js",
   "author": "33",
   "license": "MIT"
