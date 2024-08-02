@@ -1,3 +1,5 @@
+迁移到：https://github.com/open33oj/hydro-plugins
+
 [33OJ](https://oj.33dai.cn/) 中的自定义插件及修改使用的第三方插件
 
 ## 插件简介
